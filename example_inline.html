@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Web Page Example</title>
+</head>
+<body style="font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f9; color: #333; text-align: center;">
+    <header style="background-color: #4CAF50; color: white; padding: 1rem 0;">
+        <h1>Welcome to My Web Page</h1>
+    </header>
+    <main style="padding: 2rem;">
+        <p>This is a simple example of a web page with some basic styling and JavaScript functionality.</p>
+        <button id="alertButton" 
+            style="background-color: #4CAF50; 
+            color: white; border: none; 
+            padding: 0.5rem 1rem; font-size: 1rem; 
+            border-radius: 5px; cursor: pointer; 
+            transition: background-color 0.3s ease;">
+            Click Me!</button>
+            <!-- you cannot use :hover directly in inline styles because it is a pseudo-class, 
+             which requires a <style> block or an external CSS file. -->
+        <p>rem stands for &quot;root em&quot; and is a relative unit of measurement in CSS. 1rem is equal to the font size of the root element. By default, most browsers set the root font size to 16px, so:
+            <ul style="list-style-position: outside; text-align: left; padding: 0; display: inline-block;">
+            <li>1rem = 16px</li>
+            <li>0.5rem = 8px</li>
+            <li>2rem = 32px</li></ul></p>
+    </main>
+    <footer style="margin-top: 2rem; background-color: #333; color: white; padding: 1rem 0; font-size: 0.9rem;">
+        <p>&copy; 2025 My Simple Web Page</p>
+    </footer>
+
+    <script>
+        // JavaScript to display an alert when the button is clicked
+        document.getElementById('alertButton').addEventListener('click', function() {
+            alert('Hello! You clicked the button.');
+        });
+    </script>
+</body>
+</html>
