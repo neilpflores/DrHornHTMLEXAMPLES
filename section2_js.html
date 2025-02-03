@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function buttonClicked() {
+                console.log("button clicked");
+                const input = document.getElementById("myInput");
+                input.disabled = !input.disabled;
+            }
+            document.addEventListener("DOMContentLoaded", () => {
+                const buttons = document.querySelectorAll("button");
+
+            for (const button of buttons) {
+                button.addEventListener("click", buttonClicked);
+            }
+
+            });
+        </script>
+    </head>
+    <body>
+        <input id="myInput" disabled/>
+        <button id="enableMe">enable/disable</button>
+    </body>
+</html>
