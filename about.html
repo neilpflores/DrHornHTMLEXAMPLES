@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Web Page Example</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>About Me</h1>
+    </header>
+    <nav>
+        <div class="header2">
+            <a href="home.html" class="notactive">Home</a>
+            <a href="about.html" class="active">About</a>
+            <a href="top.html" class="notactive">Top 10</a></div>
+    </nav>
+    <main>
+        <div class="boXcolumn">
+            <p class="whoamI">Who Am I?</p>
+            <p>Hi, I'm Neil Flores, a student who loves gaming, traveling and trying new things.</p>
+            <img width=auto height="350px" src="../neil.png"/>
+
+        </div>
+        <div class="column">
+            <p class="whoamI">Some facts about me</p>
+            <p> :3 I've been gaming for as long as I can remember.</p>
+            <p> :> I have an older sister and a younger brother</p>
+            <p> :) My favorite country I've been to has been New Zealand when I studied abroad last year in the spring</p>
+            <p> :p I am a captain of the substance-free living community hall called the Swashbucklers</p>
+            <p> :] In the future I want to be a beekeeper and give honey to my friends and family</p>
+        </div>
+
+    </main>
+    <button class="button" onclick="navigate()" >Top 10</button>
+    <footer>
+        <p>Website Created by Neil Flores</p>
+
+        <ul>
+                <lh>I used help from the following:</lh>
+                <li>JD McMahon</li>
+                <li>Stack Overflow</li>
+                <li>Dr. Horns Github</li>
+        </ul>
+    </footer>
+
+    <script>
+        //function in javascript to navigate between pages from index to about to top to index
+        function navigate() {
+            let currentPage = window.location.pathname.split("/").pop();
+            let nextPage = currentPage === "home.html" ? "about.html" :
+                           currentPage === "about.html" ? "top.html" : "home.html";
+            window.location.href = nextPage;
+        }
+    </script>
+</body>
+</html>

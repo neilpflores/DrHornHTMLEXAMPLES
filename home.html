@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Web Page Example</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Website</h1>
+    </header>
+    <nav>
+        <div class="header2">
+        <a href="home.html" class="active">Home</a>
+        <a href="about.html" class="notactive">About</a>
+        <a href="top.html" class="notactive">Top 10</a></div>
+    </nav>
+    <main>
+        <div class="boXcolumn">
+            <ol> 
+                <lh>Featured:</lh>
+                <li>Discover my top 10 favorite games</li>
+                <li>Learn more about me on my About page</li>    
+            </ol>
+        </div>
+        <div class="column">
+            <p>This site is all about my favorite things and hobbies. Explore the site to learn more!</p>
+        </div>
+    </main>
+    <button class="button" onclick="navigate()" >Learn More</button>
+    <footer>
+        <p>Website Created by Neil Flores</p>
+
+        <ul>
+                <lh>Help from the following:</lh>
+                <li>JD McMahon</li>
+                <li>Stack Overflow</li>
+                <li>Dr. Horns Github</li>
+        </ul>
+    </footer>
+
+    <script>
+        //function in javascript to navigate between pages from index to about to top to index
+        function navigate() {
+            let currentPage = window.location.pathname.split("/").pop();
+            let nextPage = currentPage === "home.html" ? "about.html" :
+                           currentPage === "about.html" ? "top.html" : "index.html";
+            window.location.href = nextPage;
+        }
+    </script>
+</body>
+</html>

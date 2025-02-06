@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Web Page Example</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>My Favorite Video Games</h1>
+    </header>
+    <nav>
+        <div class="header2">
+        <a href="home.html" class="notactive">Home</a>
+        <a href="about.html" class="notactive">About</a>
+        <a href="top.html" class="active">Top 10</a></div>
+    </nav>
+    <main>
+        <div class="column">
+            <ul style="font-size: 1.2em; font-weight: bold;">
+            <p>Top 1-5:</p>
+                <ul style="font-size: 16px; font-weight: normal; list-style-position: outside; text-align: left; padding: 0; display: inline-block;">
+                <li>1: Valorant</li>
+                <li>2: Destiny 2</li>
+                <li>3: Minecraft</li>
+                <li>4: Starfield</li>
+                <li>5: Baldurs gate 3</li></ul>
+    
+        </div>
+        <div class="column">
+            <ul style="font-size: 1.2em; font-weight: bold;">
+                <p>Top 6-10:</p>
+                    <ul style="font-size: 16px; font-weight: normal; list-style-position: outside; text-align: left; padding: 0; display: inline-block;">
+                    <li>6: Risk of Rain 2</li>
+                    <li>7: Dune: Spice Wars</li>
+                    <li>8: Total War: Warhammer 3</li>
+                    <li>9: Helldivers 2</li>
+                    <li>10: Crusader Kings 3</li></ul>
+        </div>
+    </main>
+    <button class="button" onclick="navigate()" >Home</button>
+    <footer>
+        <p>Website Created by Neil Flores</p>
+
+        <ul>
+            <lh> I used help from the following:</lh>
+                <li>JD McMahon</li>
+                <li>Stack Overflow</li>
+                <li>Dr. Horns Github</li>
+        </ul>
+    </footer>
+
+    <script>
+        //function in javascript to navigate between pages from index to about to top to index
+        function navigate() {
+            let currentPage = window.location.pathname.split("/").pop();
+            let nextPage = currentPage === "home.html" ? "about.html" :
+                           currentPage === "about.html" ? "top.html" : "home.html";
+            window.location.href = nextPage;
+        }
+    </script>
+</body>
+</html>
