@@ -1,8 +1,11 @@
 const express = require("express");
 const app = express();
 const port = 5000;
+const api = require("./api2.js")
 
 app.use(express.static(__dirname));
+
+app.use("/api",api);
 
 app.get("/", (req, res) => {
     console.log("request to root");
