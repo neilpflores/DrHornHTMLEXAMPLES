@@ -1,9 +1,24 @@
 <%- include('./partials/header') %>
-  <body>
+  
+<body>
+    <script>
+      function showPopup(element) {
+          const popup = element.querySelector(".popup");
+          popup.style.display = "block";
+      }
+
+      function hidePopup(element) {
+          const popup = element.querySelector(".popup");
+          popup.style.display = "none";
+      }
+  </script>
     <ul>
       <% books.forEach((book) => { %>
         <h2><%= book.title %></h2>
-        <p><%= book.author %></p>
+        <div class="hover-box" onmouseover="showPopup(this)" onmouseleave="hidePopup(this)">
+          <p><%= book.author %></p>
+          <div class="popup">This is a JS popup box!</div>
+        </div>
       <% }) %>
     </ul>
   </body>

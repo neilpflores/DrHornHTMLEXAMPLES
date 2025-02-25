@@ -6,3 +6,20 @@ body {
 a {
   color: #00B7FF;
 }
+
+.hover-box {
+  position: relative;
+  display: inline-block;
+}
+
+.popup {
+  display: none;
+  position: absolute;
+  width: 150px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 8px;
+  border-radius: 5px;
+  pointer-events: none;
+}
