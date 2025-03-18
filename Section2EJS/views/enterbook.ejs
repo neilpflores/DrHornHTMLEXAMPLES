@@ -1,0 +1,12 @@
+<%- include('./partials/header') %>
+<body>
+    <h1>Enter new book information:</h1>
+    <form action="./addbook" method="post">
+        <label for="title">Book title:</label>
+        <input type="text" name="title" id="title"><br>
+        <label for="author">Author:</label>
+        <input type="text" name="author" id="author"><br>
+        <input type="submit" value="Add Book">
+    </form>
+</body>
+</html>
